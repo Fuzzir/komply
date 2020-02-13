@@ -25,17 +25,17 @@ class login extends CI_Controller{
         $this->load->view('loginView', $data);
         
         $this->loginModel->checkVar();
-        if(isset($_POST['login'])){
-            if($id=$this->loginModel->loginSuccess($_POST['login'],$_POST['pass'])){
-                $this->loginModel->writeSession($id['ID_user']);
-                redirect('main');
-            }
-            else{
-                $this->session->set_userdata('logged', false);
-                redirect('login');             
-            }           
+        if(!isset($_POST['login'])){
+            redirect('login');                     
         }
-
+        
+        if($id=$this->loginModel->loginSuccess($_POST['login'],$_POST['pass'])){
+            $this->loginModel->writeSession($id['ID_user']);
+            redirect('main');
+        }
+        
+        $this->session->set_userdata('logged', false);
+        redirect('login'); 
 	}
     function logout(){
         $this->loginModel->logout();

@@ -14,9 +14,8 @@ class loginModel extends CI_Model{
             $data=$query->result_array();
             $this->session->set_userdata('type',$data[0]['type']);
             return $data[0];
-        } else {
-            return FALSE;
-        }
+        } 
+        return FALSE;
     }
 
     function writeSession($idu) {
