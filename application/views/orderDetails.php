@@ -40,7 +40,7 @@
                 
                 <?php foreach ($statusy as $row):
  
-                    echo '<option value="'.$row["order_code"].'">'.$row["status_description"].'</option>';
+                    echo '<option value="'.$row["status_id"].'">'.$row["status_description"].'</option>';
 
                 endforeach;?>
                 </select>

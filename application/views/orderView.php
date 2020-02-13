@@ -43,7 +43,7 @@
                     </button></a>
             </div>
         </form>
-        <?php else: echo "<br>Musisz być zalogowany, kliknij Wstecz i zaloguj się.<br><br>".anchor('cart','Wstecz'); endif;?>
+        <?php else: echo '<div class="alert alert-warning">Musisz być zalogowany, kliknij Wstecz i zaloguj się.<br>'.anchor('cart','Wstecz'); endif;?>
     </div>
 </body>
 </html>

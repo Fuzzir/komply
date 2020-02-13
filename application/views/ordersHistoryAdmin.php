@@ -3,7 +3,7 @@
     <?=$head?>
     <body>
         <?=$navView?>
-            <div>
+            <div style="max-width: 80em; margin: auto">
                 <table class="table table-striped">
                     <thead><tr><th>Numer zamówenia</th><th>E-mail</th><th>Data złożenia</th><th>Status</th><th>Kwota</th><th></th></tr></thead>
                     <tbody>

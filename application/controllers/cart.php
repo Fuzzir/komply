@@ -56,7 +56,7 @@ class cart extends CI_Controller{
             extract($_POST);
             $order = array(
                 'user_id' => $this->session->userdata['userID'],
-                'order_status' => 1,
+                'status_id' => 1,
                 'order_date' => date("Y-m-d H:i:s")
             );
             $id=$this->cartModel->insert_order($order);

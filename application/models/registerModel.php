@@ -1,14 +1,13 @@
 <?php
-class registerModel extends CI_Model{
-    public function __construct() {
+class registerModel extends CI_Model
+{
+	public function __construct() 
+	{
         parent::__construct();
         $this->load->database();
-    }
-    function index(){
-        
-    }
-
-    function validate() {
+	}
+	
+	function validate() {
     	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     		if ($_POST['password'] == $_POST['repassword']) {
@@ -33,8 +32,6 @@ class registerModel extends CI_Model{
     			}
   
     			header( "location: main" );
-
-
 	    	} else {
 	    		$_SESSION['message'] = 'Hasła nie są takie same.';
 	    	}
