@@ -11,6 +11,7 @@
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="'.base_url("orders").'">Zamówienia</a></li>
+                    <li><a href="'.base_url("users").'">Użytkownicy</a></li>
                     <li><a href="'.base_url("products/add").'">Dodaj produkt</a></li>
                     <li><a href="'.base_url("login/logout").'">Wyloguj</a></li>
                 </ul>
