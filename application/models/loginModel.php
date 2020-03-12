@@ -15,7 +15,7 @@ class loginModel extends CI_Model
             $data=$query->result_array();
             $this->session->set_userdata('type',$data[0]['type']);
             return $data[0];
-        } 
+        }
         return FALSE;
     }
 
@@ -30,7 +30,7 @@ class loginModel extends CI_Model
     } 
 
     function logout()
-    {
+	{
         $this->session->unset_userdata('logged');
         $this->session->unset_userdata('login');
         $this->session->unset_userdata('userID');
